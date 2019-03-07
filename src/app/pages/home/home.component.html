@@ -1,0 +1,800 @@
+<!-- Banner Section Start -->
+<div *ngIf="!_infoService.cargada">
+    <div id="preloader" class="bg-primary">
+        <div class="preloader--spinner"></div>
+    </div>
+</div>
+<div *ngIf="_infoService.cargada">
+
+    <section id="banner" class="banner--section" data-bg-parallax="assets/img/banner-img/bg.jpg" data-overlay="0.8">
+        <div class="vc--parent">
+            <div class="vc--child">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <!-- Banner Content Start -->
+                            <div class="banner--content text-center pt--160 pb--100">
+                                <div class="title text-uppercase">
+                                    <h2 class="h3 text-white"><span class="text-primary">Hola</span> Soy</h2>
+                                </div>
+
+                                <div class="name text-uppercase">
+                                    <h3 class="h2 text-white">{{ _infoService.info.name }}</h3>
+                                </div>
+
+                                <div class="role fs--18 fw--700 text-white">
+                                    <p>{{ _infoService.info.title }}</p>
+                                </div>
+
+                                <div class="desc">
+                                    <p>{{ _infoService.info.desc }}</p>
+                                </div>
+
+                                <div class="action">
+                                    <a href="#" class="btn btn-default">Contactame</a>
+                                    <a href="#" class="btn btn-white">Mis Trabajos</a>
+                                </div>
+                            </div>
+                            <!-- Banner Content End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section End -->
+
+    <!-- About Section Start -->
+    <section id="aboutme" class="section pt--100 pb--40">
+        <div class="container">
+            <!-- Section Title Start -->
+            <div class="section--title pb--60 text-center">
+                <h2 class="h2 text-uppercase">Sobre Mi</h2>
+            </div>
+            <!-- Section Title End -->
+
+            <div class="row row--md-vc">
+                <div class="col-md-6 pb--60">
+                    <!-- Image Block Start -->
+                    <div class="img--block">
+                        <img src="assets/img/about-img/01.jpg" alt="">
+                    </div>
+                    <!-- Image Block End -->
+                </div>
+
+                <div class="col-md-6 pb--60">
+                    <!-- About Block Start -->
+                    <div class="about--block">
+                        <div class="title">
+                            <h2 class="h4 fw--700 text-uppercase">Detalles Personales</h2>
+                        </div>
+
+                        <div class="details pt--30 text-dark">
+                            <p>Duis aute dolor sit amet, consectetur adipisicing elit. Facere soluta, totam nihil minima, recusandae sapiente saepe provident ullam itaque nemo, beatae minus ratione asperiores aliquid vitae, debitis sint.</p>
+                        </div>
+
+                        <div class="details pt--30">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ea aliquid nostrum rem. Asperiores molestiae magni obcaecati aliquam quam aliquid reiciendis corrupti excepturi perferendis ab aut, inventore sunt hic iusto.</p>
+                        </div>
+
+                        <div class="info pt--50">
+                            <table class="ff--primary">
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <i class="fa fa-calendar"></i>
+                                            <span>Nacimiento</span>
+                                        </th>
+                                        <td>20/12/1986</td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <i class="fa fa-phone"></i>
+                                            <span>Telefono</span>
+                                        </th>
+                                        <td><a href="tel:+528125212084" class="btn-link">{{ _infoService.info.phone }}</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <i class="fa fa-envelope"></i>
+                                            <span>Email</span>
+                                        </th>
+                                        <td><a href="mailto:jajeantp@gmail.com" class="btn-link">{{ _infoService.info.email }}</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <i class="fa fa-skype"></i>
+                                            <span>Skype</span>
+                                        </th>
+                                        <td>jose.jeanton</td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <i class="fa fa-globe"></i>
+                                            <span>Website</span>
+                                        </th>
+                                        <td><a href="www.josejeanton.com" class="btn-link">{{ _infoService.info.site }}</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="social text-dark pt--30">
+                            <ul class="nav">
+                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                                <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="action pt--60">
+                            <a href="#" class="btn btn-default">Descargar Resumen</a>
+                        </div>
+                    </div>
+                    <!-- About Block End -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Services Section Start -->
+    <section id="services" class="section pt--100 pb--40 bg-light">
+        <div class="container">
+            <!-- Section Title Start -->
+            <div class="section--title pb--60 text-center">
+                <h2 class="h2 text-uppercase">Servicios que Ofrezco</h2>
+            </div>
+            <!-- Section Title End -->
+
+            <div class="row AdjustRow" data-scroll-reveal="group">
+                <div *ngFor="let service of _serviciosService.servicios" class="col-md-3 col-xs-6 col-xxs-12 pb--60">
+                    <!-- Service Block Start -->
+                    <div class="service--block">
+                        <div class="icon">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+
+                        <div class="title">
+                            <h3 class="h4">{{ service.title }}</h3>
+                        </div>
+
+                        <div class="desc">
+                            <p>{{ service.desc }}</p>
+                        </div>
+                    </div>
+                    <!-- Service Block End -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- Portfolio Section Start -->
+    <section id="portfolio" class="section pt--100 pb--40">
+        <div class="container">
+            <!-- Section Title Start -->
+            <div class="section--title pb--60 text-center">
+                <h2 class="h2 text-uppercase">Portafolio</h2>
+            </div>
+            <!-- Section Title End -->
+
+            <!-- Portfolio Filter Menu Start -->
+            <div class="portfolio--filter-menu pb--50">
+                <ul class="nav">
+                    <li data-target="*" class="active">All Works</li>
+                    <li data-target="illustration">Illustration</li>
+                    <li data-target="ui-design">UI Design</li>
+                    <li data-target="branding">Branding Design</li>
+                </ul>
+            </div>
+            <!-- Portfolio Filter Menu End -->
+
+            <!-- Portfolio Items Start -->
+            <div class="portfolio--items row MasonryRow pb--30" data-trigger="gallery_popup">
+                <div *ngFor="let work of _portfolioService.portfolio" class="col-md-3 col-xs-6 col-xxs-12 pb--30" data-cat="illustration ui-design">
+                    <!-- Portfolio Item Start -->
+                    <div class="portfolio--item">
+                        <img [src]="work.url" alt="">
+
+                        <a [href]="work.href" class="caption">
+                            <div class="vc--parent">
+                                <div class="vc--child">
+                                    <h3 class="h6">{{ work.title }}</h3>
+
+                                    <p>{{ work.subtitle }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Portfolio Item End -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Portfolio Section End -->
+
+    <!-- Call To Action Start -->
+    <section class="section pt--100 pb--100" data-bg-parallax="assets/img/call-to-action-img/bg.jpg" data-overlay="0.7">
+        <div class="container">
+            <!-- Call To Action Block Start -->
+            <div class="cta--block text-center">
+                <div class="title">
+                    <h2 class="h2 text-white">Tienes alguna idea o proyecto interesante?</h2>
+                </div>
+
+                <div class="content fs--20 pt--10 text-white">
+                    <p>Juntos encontraremos la forma más rapida, creativa e innovadora de darle forma a tus proyectos.</p>
+                </div>
+
+                <div class="action pt--20">
+                    <a href="#" class="btn btn-white">Contratame Ahora!</a>
+                </div>
+            </div>
+            <!-- Call To Action Block End -->
+        </div>
+    </section>
+    <!-- Call To Action End -->
+
+    <!-- Resume Section Start -->
+    <section id="resume" class="section pt--100 pb--100">
+        <div class="container">
+            <!-- Section Title Start -->
+            <div class="section--title pb--60 text-center">
+                <h2 class="h2 text-uppercase">Mi Resumen</h2>
+            </div>
+            <!-- Section Title End -->
+
+            <!-- Timeline Block Start -->
+            <div class="timeline--block">
+                <div class="title">
+                    <h3 class="h5">Educación</h3>
+                </div>
+
+                <div class="sub-title">
+                    <p class="fs--16">La educación es el fundamento verdadero de la felicidad.</p>
+                </div>
+
+                <!-- Timeline Items Start -->
+                <ul class="timeline--items nav">
+                    <li *ngFor="let res of _resumeService.education">
+                        <!-- Timeline Item Start -->
+                        <div class="timeline--item">
+                            <div class="icon bg-default">
+                                <i class="fa fa-graduation-cap"></i>
+                            </div>
+
+                            <table class="table" data-scroll-reveal="bottom">
+                                <tr>
+                                    <td>
+                                        <p class="date bg-primary">{{ res.date }}</p>
+
+                                        <div class="bottom">
+                                            <h4 class="name h6 fw--700">{{ res.name }}</h4>
+
+                                            <p class="institute ff--primary">{{ res.titlea }}</p>
+
+                                            <p class="location fs--12">{{ res.location }}</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="content">
+                                            <p>{{ res.content }}</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- Timeline Item End -->
+                    </li>
+                </ul>
+                <!-- Timeline Items End -->
+            </div>
+            <!-- Timeline Block End -->
+        </div>
+    </section>
+    <!-- Resume Section End -->
+
+    <!-- Experience Section Start -->
+    <section class="section pt--100 pb--100 bg-light">
+        <div class="container">
+            <!-- Timeline Block Start -->
+            <div class="timeline--block">
+                <div class="title">
+                    <h3 class="h5">Experiencia</h3>
+                </div>
+
+                <div class="sub-title">
+                    <p class="fs--16">"La materia prima más preciosa del presente y futuro... es la materia gris".</p>
+                </div>
+
+                <!-- Timeline Items Start -->
+                <ul class="timeline--items nav">
+                    <li *ngFor="let exper of _experienceService.experiences">
+                        <!-- Timeline Item Start -->
+                        <div class="timeline--item">
+                            <div class="icon bg-light">
+                                <i class="fa fa-briefcase"></i>
+                            </div>
+
+                            <table class="table" data-scroll-reveal="bottom">
+                                <tr>
+                                    <td>
+                                        <p class="date bg-primary">{{ exper.date }}</p>
+
+                                        <div class="bottom">
+                                            <h4 class="name h6 fw--700">{{ exper.company }}</h4>
+
+                                            <p class="institute ff--primary">{{ exper.job }}</p>
+
+                                            <p class="location fs--12">{{ exper.location }}</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="content">
+                                            <p>{{ exper.description }}</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- Timeline Item End -->
+                    </li>
+
+                </ul>
+                <!-- Timeline Items End -->
+            </div>
+            <!-- Timeline Block End -->
+        </div>
+    </section>
+    <!-- Experience Section End -->
+
+    <!-- Skills Section Start -->
+    <section id="skills" class="section pt--100 pb--40" data-bg-img="img/skills-img/bg.jpg" data-overlay="0.7">
+        <div class="container">
+            <!-- Section Title Start -->
+            <div class="section--title pb--60 text-center">
+                <h2 class="h2 text-white text-uppercase">Mis Habilidades</h2>
+            </div>
+            <!-- Section Title End -->
+
+            <div class="row">
+                <div class="col-md-6 pb--60">
+                    <!-- Skills Items Start -->
+                    <div class="skills--items">
+                        <div class="skill--title text-uppercase">
+                            <h3 class="h4 text-white">Habilidades personales</h3>
+                        </div>
+
+                        <!-- Skill Item Start -->
+                        <div class="skill--item">
+                            <h4 class="h6 fw--400 text-white text-uppercase clearfix">
+                                <span class="skill--text">Capacidad de Adaptación</span>
+                                <span class="skill--count float--right">90%</span>
+                            </h4>
+
+                            <p class="skill--progress" style="width: 90%;" data-trigger="progress_bar"></p>
+                        </div>
+                        <!-- Skill Item End -->
+
+                        <!-- Skill Item Start -->
+                        <div class="skill--item">
+                            <h4 class="h6 fw--400 text-white text-uppercase clearfix">
+                                <span class="skill--text">Auto Motivación</span>
+                                <span class="skill--count float--right">85%</span>
+                            </h4>
+
+                            <p class="skill--progress" style="width: 85%;" data-trigger="progress_bar"></p>
+                        </div>
+                        <!-- Skill Item End -->
+
+                        <!-- Skill Item Start -->
+                        <div class="skill--item">
+                            <h4 class="h6 fw--400 text-white text-uppercase clearfix">
+                                <span class="skill--text">Comunicación</span>
+                                <span class="skill--count float--right">60%</span>
+                            </h4>
+
+                            <p class="skill--progress" style="width: 60%;" data-trigger="progress_bar"></p>
+                        </div>
+                        <!-- Skill Item End -->
+
+                        <!-- Skill Item Start -->
+                        <div class="skill--item">
+                            <h4 class="h6 fw--400 text-white text-uppercase clearfix">
+                                <span class="skill--text">Trabajo en Equipo</span>
+                                <span class="skill--count float--right">75%</span>
+                            </h4>
+
+                            <p class="skill--progress" style="width: 75%;" data-trigger="progress_bar"></p>
+                        </div>
+                        <!-- Skill Item End -->
+
+                        <!-- Skill Item Start -->
+                        <div class="skill--item">
+                            <h4 class="h6 fw--400 text-white text-uppercase clearfix">
+                                <span class="skill--text">Puntualidad</span>
+                                <span class="skill--count float--right">95%</span>
+                            </h4>
+
+                            <p class="skill--progress" style="width: 95%;" data-trigger="progress_bar"></p>
+                        </div>
+                        <!-- Skill Item End -->
+                    </div>
+                    <!-- Skills Items End -->
+                </div>
+
+                <div class="col-md-6 pb--60">
+                    <!-- Skills Items Start -->
+                    <div class="skills--items">
+                        <div class="skill--title text-uppercase">
+                            <h3 class="h4 text-white">Habilidades Profesionales</h3>
+                        </div>
+
+                        <!-- Skill Item Start -->
+                        <div class="skill--item">
+                            <h4 class="h6 fw--400 text-white text-uppercase clearfix">
+                                <span class="skill--text">Angular</span>
+                                <span class="skill--count float--right">90%</span>
+                            </h4>
+
+                            <p class="skill--progress" style="width: 90%;" data-trigger="progress_bar"></p>
+                        </div>
+                        <!-- Skill Item End -->
+
+                        <!-- Skill Item Start -->
+                        <div class="skill--item">
+                            <h4 class="h6 fw--400 text-white text-uppercase clearfix">
+                                <span class="skill--text">PHP</span>
+                                <span class="skill--count float--right">70%</span>
+                            </h4>
+
+                            <p class="skill--progress" style="width: 70%;" data-trigger="progress_bar"></p>
+                        </div>
+                        <!-- Skill Item End -->
+
+                        <!-- Skill Item Start -->
+                        <div class="skill--item">
+                            <h4 class="h6 fw--400 text-white text-uppercase clearfix">
+                                <span class="skill--text">Firebase</span>
+                                <span class="skill--count float--right">60%</span>
+                            </h4>
+
+                            <p class="skill--progress" style="width: 60%;" data-trigger="progress_bar"></p>
+                        </div>
+                        <!-- Skill Item End -->
+
+                        <!-- Skill Item Start -->
+                        <div class="skill--item">
+                            <h4 class="h6 fw--400 text-white text-uppercase clearfix">
+                                <span class="skill--text">CSS3</span>
+                                <span class="skill--count float--right">85%</span>
+                            </h4>
+
+                            <p class="skill--progress" style="width: 85%;" data-trigger="progress_bar"></p>
+                        </div>
+                        <!-- Skill Item End -->
+
+                        <!-- Skill Item Start -->
+                        <div class="skill--item">
+                            <h4 class="h6 fw--400 text-white text-uppercase clearfix">
+                                <span class="skill--text">HTML5</span>
+                                <span class="skill--count float--right">90%</span>
+                            </h4>
+
+                            <p class="skill--progress" style="width: 90%;" data-trigger="progress_bar"></p>
+                        </div>
+                        <!-- Skill Item End -->
+                    </div>
+                    <!-- Skills Items End -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section End -->
+
+    <!-- Pricing Section Start -->
+    <section id="pricing" class="section pt--100 pb--40 bg-light">
+        <div class="container">
+            <!-- Section Title Start -->
+            <div class="section--title pb--60 text-center">
+                <h2 class="h2 text-uppercase">Lista de Precios</h2>
+            </div>
+            <!-- Section Title End -->
+
+            <div class="row AdjustRow">
+                <div class="col-md-4 col-xs-12 pb--60">
+                    <!-- Pricing Item Start -->
+                    <div class="pricing--item">
+                        <div class="pricing--header bg-primary">
+                            <div class="plan">
+                                <h3 class="h3 text-primary">Inicio</h3>
+                            </div>
+
+                            <div class="price ff--primary">
+                                <p>Form <span>$50</span></p>
+                            </div>
+                        </div>
+
+                        <div class="pricing--features fs--16 ff--primary">
+                            <ul class="nav">
+                                <li>Web Design Service</li>
+                                <li>Web Development Service</li>
+                                <li>Graphic Design Service</li>
+                                <li>SEO Service</li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing--action">
+                            <a href="#" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                    <!-- Pricing Item End -->
+                </div>
+
+                <div class="col-md-4 col-xs-12 pb--60">
+                    <!-- Pricing Item Start -->
+                    <div class="pricing--item">
+                        <div class="pricing--header bg-primary">
+                            <div class="plan">
+                                <h3 class="h3 text-primary">Diseño</h3>
+                            </div>
+
+                            <div class="price ff--primary">
+                                <p>Form <span>$150</span></p>
+                            </div>
+                        </div>
+
+                        <div class="pricing--features fs--16 ff--primary">
+                            <ul class="nav">
+                                <li>Web Design Service</li>
+                                <li>Web Development Service</li>
+                                <li>Graphic Design Service</li>
+                                <li>SEO Service</li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing--action">
+                            <a href="#" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                    <!-- Pricing Item End -->
+                </div>
+
+                <div class="col-md-4 col-xs-12 pb--60">
+                    <!-- Pricing Item Start -->
+                    <div class="pricing--item">
+                        <div class="pricing--header bg-primary">
+                            <div class="plan">
+                                <h3 class="h3 text-primary">Desarrollo</h3>
+                            </div>
+
+                            <div class="price ff--primary">
+                                <p>Form <span>$250</span></p>
+                            </div>
+                        </div>
+
+                        <div class="pricing--features fs--16 ff--primary">
+                            <ul class="nav">
+                                <li>Web Design Service</li>
+                                <li>Web Development Service</li>
+                                <li>Graphic Design Service</li>
+                                <li>SEO Service</li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing--action">
+                            <a href="#" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                    <!-- Pricing Item End -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section End -->
+
+    <!-- Clients Section Start -->
+    <section id="clients" class="section pt--80 pb--20">
+        <div class="container">
+            <div class="row" data-scroll-reveal="group">
+                <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
+                    <!-- Client Item Start -->
+                    <div class="client--item">
+                        <img src="assets/img/brands-img/01.png" alt="" class="center-block">
+                    </div>
+                    <!-- Client Item End -->
+                </div>
+
+                <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
+                    <!-- Client Item Start -->
+                    <div class="client--item">
+                        <img src="assets/img/brands-img/02.png" alt="" class="center-block">
+                    </div>
+                    <!-- Client Item End -->
+                </div>
+
+                <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
+                    <!-- Client Item Start -->
+                    <div class="client--item">
+                        <img src="assets/img/brands-img/03.png" alt="" class="center-block">
+                    </div>
+                    <!-- Client Item End -->
+                </div>
+
+                <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
+                    <!-- Client Item Start -->
+                    <div class="client--item">
+                        <img src="assets/img/brands-img/04.png" alt="" class="center-block">
+                    </div>
+                    <!-- Client Item End -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Clients Section End -->
+
+    <!-- Testimonial Section Start -->
+    <section id="testimonial" class="section pt--90 pb--90" data-bg-parallax="img/testimonial-img/bg.jpg" data-overlay="0.5">
+        <div class="container">
+            <!-- Testimonial Slider Start -->
+            <div class="testimonial--slider owl-carousel" data-owl-dots="true">
+                <!-- Testimonial Item Start -->
+                <div class="testimonial--item text-white">
+                    <div class="icon">
+                        <i class="fa fa-comments"></i>
+                    </div>
+
+                    <blockquote>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+
+                        <footer>José Jeanton @ Diseño y Desarrollo.</footer>
+                    </blockquote>
+                </div>
+                <!-- Testimonial Item End -->
+
+                <!-- Testimonial Item Start -->
+                <div class="testimonial--item text-white">
+                    <div class="icon">
+                        <i class="fa fa-comments"></i>
+                    </div>
+
+                    <blockquote>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+
+                        <footer>Roger Martin @ Company Inc.</footer>
+                    </blockquote>
+                </div>
+                <!-- Testimonial Item End -->
+
+                <!-- Testimonial Item Start -->
+                <div class="testimonial--item text-white">
+                    <div class="icon">
+                        <i class="fa fa-comments"></i>
+                    </div>
+
+                    <blockquote>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+
+                        <footer>Wayne Stone @ Company Inc.</footer>
+                    </blockquote>
+                </div>
+                <!-- Testimonial Item End -->
+            </div>
+            <!-- Testimonial Slider End -->
+        </div>
+    </section>
+    <!-- Testimonial Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="section pt--100 pb--40 bg-light">
+        <div class="container">
+            <!-- Section Title Start -->
+            <div class="section--title pb--60 text-center">
+                <h2 class="h2 text-uppercase">Contactame</h2>
+            </div>
+            <!-- Section Title End -->
+
+            <div class="row AdjustRow pb--10">
+                <div class="col-md-4 col-xs-12 pb--40">
+                    <!-- Contact Info Block Start -->
+                    <div class="contact--info-block" data-scroll-reveal="bottom">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+
+                        <div class="title text-uppercase">
+                            <h3 class="h4">Llamame</h3>
+                        </div>
+
+                        <div class="desc">
+                            <p><a href="tel:+528125212084" class="btn-link">(+52) 81 25251 2084</a>, <a href="tel:+123123123456" class="btn-link">(+52) 81 25251 2084</a></p>
+                        </div>
+                    </div>
+                    <!-- Contact Info Block End -->
+                </div>
+
+                <div class="col-md-4 col-xs-12 pb--40">
+                    <!-- Contact Info Block Start -->
+                    <div class="contact--info-block" data-scroll-reveal="bottom">
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+
+                        <div class="title text-uppercase">
+                            <h3 class="h4">Visitame</h3>
+                        </div>
+
+                        <div class="desc">
+                            <p>Monterrey., Nuevo Leon, Mexico</p>
+                        </div>
+                    </div>
+                    <!-- Contact Info Block End -->
+                </div>
+
+                <div class="col-md-4 col-xs-12 pb--40">
+                    <!-- Contact Info Block Start -->
+                    <div class="contact--info-block" data-scroll-reveal="bottom">
+                        <div class="icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+
+                        <div class="title text-uppercase">
+                            <h3 class="h4">Enviame un Mensaje</h3>
+                        </div>
+
+                        <div class="desc">
+                            <p><a href="mailto:jajeantp@gmail.com" class="btn-link">jajeantp@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <!-- Contact Info Block End -->
+                </div>
+            </div>
+
+            <!-- Contact Form Start -->
+            <div class="contact--form pb--60" data-form="ajax">
+                <div class="title text-center text-uppercase pb--30">
+                    <h3 class="h4">Puedes dejarme unas lineas por aqui!</h3>
+                </div>
+
+                <form action="forms/contact-form.php">
+                    <div class="status"></div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Nombre *" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="E-mail *" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" name="subject" placeholder="Asunto *" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Mensaje *" class="form-control" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-block btn-primary">Enviar mensaje</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- Contact Form End -->
+        </div>
+    </section>
+    <!-- Contact Section End -->
+</div>
