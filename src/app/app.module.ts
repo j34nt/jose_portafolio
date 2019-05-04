@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,21 +13,34 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
 import { PortfolioService } from './services/portfolio.service';
 import { ExperienceService } from './services/experience.service';
 import { ServiciosService } from './services/servicios.service';
+import { ContactDialogComponent } from './pages/contact-dialog/contact-dialog.component';
+import { SharedModule } from './shared/shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ParallaxDirective } from './directives/parallax.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ContactDialogComponent,
+    ParallaxDirective
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   providers: [PortfolioService, ExperienceService, ServiciosService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ContactDialogComponent]
 })
 export class AppModule { }

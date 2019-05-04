@@ -1,0 +1,42 @@
+<div class="fondo-negro animated fadeIn" [ngClass]="_contactService.oculto">
+    <div class="widget w70" style="display: block;">
+        <div class="widget--title">
+            <h2 class="h4">Contactame</h2>
+        </div>
+
+        <!-- Newsletter Widget Start -->
+        <div class="newsletter--widget bg-default" data-form="validate">
+            <div class="desc">
+                <p>Llena los campos, enviame tus datos y preguntas y me pondre en contacto lo mas pronto posible.</p>
+            </div>
+
+            <form [formGroup]="forma" novalidate="novalidate">
+                <div class="row">
+                    <div class="col-md-6 col-xxs-12">
+                        <div class="form-group">
+                            <input formControlName="name" type="text" name="nombre" placeholder="Ingresa tu Nombre" class="form-control" autocomplete="off" required="">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xxs-12">
+                        <div class="form-group">
+                            <input formControlName="email" type="email" name="EMAIL" placeholder="Ingresa tu email" class="form-control" autocomplete="off" required="">
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+
+                        <textarea formControlName="subject" name="subject" placeholder="Asunto" class="form-control" autocomplete="off" required=""></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <button (click)="enviarInfo()" class="btn btn-default active">Enviar</button>
+                    <button (click)="cancelar()" class="btn btn-dark">Cancelar</button>
+                </div>
+            </form>
+        </div>
+        <!-- Newsletter Widget End -->
+    </div>
+
+</div>
