@@ -11,4 +11,7 @@ export interface InfoPaginaInterface {
     skype: string;
     desc_ext: string;
     site: string;
+    birthdate: Date;
+    personal_one: string;
+    personal_two: string;
 }
